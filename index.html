@@ -1,0 +1,76 @@
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div style="position: relative;display: inline-block;">
+        <div
+            style="position: absolute;
+                display: flex;
+                width: 100%;
+                align-items: center;
+                padding: 20px;
+        ">
+            <!-- player health -->
+            <div style="display: flex; justify-content: flex-end; position: relative; width: 100%; border: 4px solid white; border-right: none;">
+                <div
+                    style="background-color: red;
+                    height: 30px;
+                    width: 100%;
+                "></div>
+                <div style="position: absolute;background-color: #818cf8; top: 0; bottom: 0; right: 0; width: 100%;" id="playerHealth"></div>
+            </div>
+            <!-- timer -->
+            <div
+                id="timer"
+                style="background-color: black;
+                    width: 100px;
+                    height: 50px;
+                    flex-shrink: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 30px;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    color: white;
+                    border: 4px solid white;
+            ">
+                10
+            </div>
+            <!-- enemy health -->
+            <div style="position: relative; width: 100%; border: 4px solid white; border-left: none;">
+                <div
+                    style="background-color: red;
+                    height: 30px;
+                "></div>
+                <div style="position: absolute;background-color: #818cf8; top: 0; bottom: 0; left: 0; right: 0;" id="enemyHealth"></div>
+            </div>
+        </div>
+        <div id="displayText" style="position: absolute; color: white;display: flex;align-items: center; justify-content: center; top: 0; bottom: 0; left: 0; right: 0; font-size: 100px; display: none;">Tie</div>
+        <canvas></canvas>
+    </div>
+    <div style="color: white; display: inline-block; position: relative; left: 50px; bottom: 100px;">
+        <h3>Player1:</h3>
+        <p>a -> move left</p>
+        <p>d -> move right</p>
+        <p>w -> jump</p>
+        <p>Space -> attack</p><br>
+        <h3>Player2:</h3>
+        <p>LeftArrow -> move left</p>
+        <p>RightArrow -> move right</p>
+        <p>UpArrow -> jump</p>
+        <p>DownArrow -> attack</p>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/classes.js"></script>
+    <script src="./index.js"></script>
+</body>
